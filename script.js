@@ -18,11 +18,11 @@ function renderPokemonInfo() {
     document.getElementById('pokemonType').innerHTML += currentPokemon['types']['0']['type']['name'];
     // Aktuelles Pokemon Bild
     document.getElementById('pokemonImage').src = currentPokemon['sprites']['other']['official-artwork']['front_default'];
-    
+
 }
 
 
-function currentStats (){
+function currentStats() {
     // Stats laden für aktuelles Pokemon
     document.getElementById('stat0').innerHTML += currentPokemon['stats']['0']['base_stat'];
     document.getElementById('stat1').innerHTML += currentPokemon['stats']['1']['base_stat'];
@@ -33,8 +33,9 @@ function currentStats (){
 }
 
 
+
 function openBaseStats() {
-    
+
     document.getElementById('showInfos').innerHTML += /*html*/`
     <div class="statInfos">
         <div class="stat1">
@@ -44,12 +45,16 @@ function openBaseStats() {
         <div class="stat2">
             <p id="stat0"></p><p id="stat1"></p><p id="stat2"></p><p id="stat3"></p><p id="stat4"></p><p id="stat5"></p>
         </div>
+
+        <div class="progress" style="height: 20px;">
+  <div class="progress-bar" id="progress-bar" role="progressbar" aria-label="Example 20px high" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
     </div>
    
    
     `;
     currentStats();
-    
+
 }
 
 
