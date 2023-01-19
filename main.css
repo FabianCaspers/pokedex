@@ -8,8 +8,10 @@ body {
 
 
 
-*, ::after, ::before {
-    box-sizing: unset !important; 
+*,
+::after,
+::before {
+    box-sizing: unset !important;
 }
 
 
@@ -28,7 +30,7 @@ body {
 .pokedex-logo {
     width: 200px;
     padding-left: 12px;
-    
+
 }
 
 .search-container {
@@ -77,6 +79,14 @@ body {
     flex-wrap: wrap;
     padding-top: 12px;
     padding-left: 12px;
+    justify-content: center;
+}
+
+@media (max-width: 1024px){
+    #allPokemons {
+        padding-left: 0;
+        justify-content: center;
+    }
 }
 
 .pokeball-img {
@@ -335,7 +345,9 @@ td span {
     width: 40px;
 }
 
-.slide-left:hover, .slide-right:hover, .back-img:hover {
+.slide-left:hover,
+.slide-right:hover,
+.back-img:hover {
     cursor: pointer;
     transform: scale(1.1);
     transition: all 225ms ease-in-out;
