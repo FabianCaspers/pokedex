@@ -271,6 +271,15 @@ function slideLeft() {
     }
 }
 
+document.addEventListener('keyup', function(event) {
+    if (event.keyCode === 37) {
+        slideLeft();
+    } else if (event.keyCode === 39) {
+        slideRight();
+    }
+});
+
+
 //search function
 function pokemonNames() {
     let search = document.getElementById('search-pokemon').value;
