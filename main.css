@@ -39,8 +39,9 @@ body {
 }
 
 .search-container input {
+    border-radius: 10px;
     @media (max-width: 1024px){
-        max-width: 6rem;
+        max-width: 4rem;
     }
 }
 
